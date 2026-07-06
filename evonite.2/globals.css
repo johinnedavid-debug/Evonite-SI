@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root { --si-cyan: 34 211 238; --si-emerald: 52 211 153; --si-violet: 167 139 250; }
+  body { @apply bg-si-bg text-slate-300 antialiased; font-family: "Inter", system-ui, sans-serif; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0f172a; }
+  ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #475569; }
+  .terminal-text { text-shadow: 0 0 2px rgba(34,211,238,0.5); }
+  .glass-panel { @apply bg-si-panel/60 backdrop-blur-md border border-si-border/50; }
+  .neon-border { box-shadow: 0 0 10px rgba(34,211,238,0.1), inset 0 0 10px rgba(34,211,238,0.05); }
+}
+@layer utilities { .text-glow { text-shadow: 0 0 10px currentColor, 0 0 20px currentColor; } }
